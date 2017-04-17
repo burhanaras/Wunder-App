@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_list_row"
+    android:paddingLeft="?listPreferredItemPaddingLeft"
+    android:paddingRight="?listPreferredItemPaddingRight"
+    android:paddingTop="@dimen/padding_list_row">
+
+    <LinearLayout
+        android:id="@+id/message_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingLeft="72dp"
+        android:paddingRight="@dimen/padding_list_row">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/from"
+            android:textSize="@dimen/msg_text_primary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/subject"
+            android:textSize="@dimen/msg_text_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/message"
+            android:textSize="@dimen/msg_text_secondary"
+            android:layout_marginBottom="3dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillAfter="false"
+            android:fillEnabled="false">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/icon_width_height"
+                android:layout_height="@dimen/icon_width_height"
+                android:src="@drawable/one"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@android:color/darker_gray"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/timestamp"
+        android:textSize="@dimen/timestamp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/icon_star"
+        android:layout_width="@dimen/icon_star"
+        android:layout_height="@dimen/icon_star"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/fuel"
+        android:layout_margin="3dp"/>
+
+</RelativeLayout>
